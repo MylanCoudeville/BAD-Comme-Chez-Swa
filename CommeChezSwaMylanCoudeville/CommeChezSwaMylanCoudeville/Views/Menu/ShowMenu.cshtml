@@ -1,0 +1,30 @@
+﻿@model MenuTypeViewModel
+<div class="row justify-content-between">
+    <div class="col">
+        <h1>@Model.GeselecteerdMenu.Naam</h1>
+        <ul>
+        @foreach (var gerecht in Model.GeselecteerdMenu.Gerechten)
+            {
+                @if (gerecht.IsVeggie)
+                {
+                    <li>@gerecht.Naam <i>(vegetarisch)</i> €@gerecht.Prijs.ToString("C")</li>
+                }
+                else
+                {
+                    <li>@gerecht.Naam €@gerecht.Prijs.ToString("C")</li>
+                }
+            }
+        </ul>
+    </div>
+
+    <div class="col-md align-items-center">
+        <h1>Onze Menu's</h1>
+        <ul>
+            @foreach (var menu in Model.Menus)
+            {
+                <li><a asp-controller="Menu" asp-action="ShowMenu" asp-route-type="@menu.Type">@menu.Naam</a></li>
+            }
+        </ul>
+    </div>
+</div>
+

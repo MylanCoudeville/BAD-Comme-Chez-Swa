@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @{
+        var begroeting = "";
+        var suggestie = "";
+    }
+    @if (DateTime.Now.Hour < 11)
+    {
+        begroeting = "Goeiemorgen!";
+        suggestie = "ontbijt";
+    } else if (DateTime.Now.Hour >= 11 && DateTime.Now.Hour < 14)
+    {
+        begroeting = "Goeiemiddag!";
+        suggestie = "lunch";
+    } else if (DateTime.Now.Hour >= 14 && DateTime.Now.Hour < 17)
+    {
+        begroeting = "Welkom!";
+        suggestie = "suggestie";
+    } else
+    {
+        begroeting = "Goeienavond!";
+        suggestie = "suggestie";
+    }
+    <h2>@begroeting</h2>
+    <p>Neem snel een kijkje naar ons heerlijke @suggestie-menu!</p>
+</div>
