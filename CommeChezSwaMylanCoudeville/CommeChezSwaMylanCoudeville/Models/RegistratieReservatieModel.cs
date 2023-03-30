@@ -26,7 +26,7 @@ namespace CommeChezSwaMylanCoudeville.Models
         public DateTime? Datum { get; set; }
 
         [Required(ErrorMessage = "U moet een tijdsstip selecteren.")]
-        public Tijdstip Tijd { get; set; }
+        public Tijdstip? Tijd { get; set; }
 
         [Range(1,10, ErrorMessage = "Het aantal moet tussen 1 en 10 liggen.")]
         [Display(Name = "Aantal mensen")]

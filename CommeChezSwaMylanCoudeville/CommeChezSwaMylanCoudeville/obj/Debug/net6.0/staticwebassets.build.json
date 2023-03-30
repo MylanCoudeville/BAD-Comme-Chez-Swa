@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XDBrxtAthXtonDVdwSpW2Kq2JGEcBOPkimlJIbNvx7o=",
+  "Hash": "v+96Iv5RjfuxhCxeRMvqvMV0HbPlra7VOApJRJGvJtE=",
   "Source": "CommeChezSwaMylanCoudeville",
   "BasePath": "_content/CommeChezSwaMylanCoudeville",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Mylan\\BAD\\BAD-Comme-Chez-Swa\\CommeChezSwaMylanCoudeville\\CommeChezSwaMylanCoudeville\\wwwroot\\img\\logo_comme_chez_swa.png",
+      "SourceId": "CommeChezSwaMylanCoudeville",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Mylan\\BAD\\BAD-Comme-Chez-Swa\\CommeChezSwaMylanCoudeville\\CommeChezSwaMylanCoudeville\\wwwroot\\",
+      "BasePath": "_content/CommeChezSwaMylanCoudeville",
+      "RelativePath": "img/logo_comme_chez_swa.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo_comme_chez_swa.png"
     },
     {
       "Identity": "C:\\Users\\Mylan\\BAD\\BAD-Comme-Chez-Swa\\CommeChezSwaMylanCoudeville\\CommeChezSwaMylanCoudeville\\wwwroot\\js\\site.js",

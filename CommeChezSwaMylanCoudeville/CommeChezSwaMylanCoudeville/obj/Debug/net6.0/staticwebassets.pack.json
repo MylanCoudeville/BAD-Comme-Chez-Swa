@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Mylan\\BAD\\BAD-Comme-Chez-Swa\\CommeChezSwaMylanCoudeville\\CommeChezSwaMylanCoudeville\\wwwroot\\img\\logo_comme_chez_swa.png",
+      "PackagePath": "staticwebassets\\img\\logo_comme_chez_swa.png"
+    },
+    {
       "Id": "C:\\Users\\Mylan\\BAD\\BAD-Comme-Chez-Swa\\CommeChezSwaMylanCoudeville\\CommeChezSwaMylanCoudeville\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
