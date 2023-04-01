@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace CommeChezSwaMylanCoudeville.Models
 {
-    public class ReservatieAanmakenViewModel
+    public class ReservatieAanmakenViewModel : Reservatie
     {
         [MaxLength(100)]
         [Required(ErrorMessage = "Uw voornaam moet ingevuld zijn.")]

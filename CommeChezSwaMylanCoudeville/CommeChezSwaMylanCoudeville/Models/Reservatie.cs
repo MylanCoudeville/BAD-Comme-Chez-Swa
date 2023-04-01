@@ -19,6 +19,11 @@ namespace CommeChezSwaMylanCoudeville.Models
         [Required(ErrorMessage = "Uw email moet ingevuld zijn.")]
         public string Email { get; set; }
 
+        [Display(Name = "Bevesting email")]
+        [Compare("Email")]
+        [Required(ErrorMessage = "Uw bevestigings email moet ingevuld zijn.")]
+        public string BevestigEmail { get; set; }
+
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Uw datum moet ingevuld zijn.")]
         public DateTime? Datum { get; set; }
