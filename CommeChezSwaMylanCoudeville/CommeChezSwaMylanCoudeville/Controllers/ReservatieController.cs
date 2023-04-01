@@ -5,24 +5,42 @@ namespace CommeChezSwaMylanCoudeville.Controllers
 {
     public class ReservatieController : Controller
     {
+        //GET-REQUESTS met URL in browser
         public IActionResult OverviewReservations()
         {
-            return View();
+            IEnumerable<Reservatie> reservaties = ReservatieRepository.GetAll();
+            return View(reservaties);
         }
-        //GET-REQUEST met URL in browser
         public IActionResult CreateReservation()
         {
             return View();
         }
+        public IActionResult DetailReservation(int id)
+        {
+            return View(ReservatieRepository.Get(id));
+        }
         //POST-REQUEST formulier verstuurd
         [HttpPost]
-        public IActionResult CreateReservation(RegistratieReservatieModel userModel)
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateReservation(Reservatie userModel)
         {
             if (ModelState.IsValid)
             {
+                ReservatieRepository.Add(userModel);
                 return RedirectToAction("Success");
             }
-            return View(userModel);
+            else
+            {
+                userModel.Akkoord = false;
+                return View(userModel);
+            }
+        }
+        [HttpPost]
+        public IActionResult OverviewReservations(int id)
+        {
+            ReservatieRepository.Delete(ReservatieRepository.Get(id));
+            IEnumerable<Reservatie> reservaties = ReservatieRepository.GetAll();
+            return View(reservaties);
         }
 
         public IActionResult Success()

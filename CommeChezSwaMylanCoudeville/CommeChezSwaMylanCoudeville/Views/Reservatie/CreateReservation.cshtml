@@ -1,4 +1,4 @@
-﻿@model RegistratieReservatieModel
+﻿@model Reservatie
 @{
     ViewBag.Titel = "Reservatie";
     ViewBag.Ondertitel = "Maak een nieuwe reservatie";
@@ -8,6 +8,7 @@
 <h2>@ViewBag.Ondertitel</h2>
 
 <div asp-validation-summary="All" class="text-danger"></div>
+
 
 <form asp-controller="Reservatie" asp-action="CreateReservation">
     <div class="form-group">
@@ -56,3 +57,9 @@
         <input type="submit" value="Maak aan" class="btn btn-primary"/>
     </div>
 </form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

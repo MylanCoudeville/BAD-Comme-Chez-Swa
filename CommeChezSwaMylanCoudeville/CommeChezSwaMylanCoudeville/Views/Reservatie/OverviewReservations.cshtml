@@ -1,5 +1,54 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model IEnumerable<Reservatie>
+
+<h1>Reservatie</h1>
+
+<h4>Overzicht</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Reservatie => Reservatie.Voornaam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Reservatie => Reservatie.Achternaam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Reservatie => Reservatie.Datum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var reservatie in Model)
+            {   
+                <tr>
+                    <td>
+                        @reservatie.Voornaam
+                    </td>
+                    <td>
+                        @reservatie.Achternaam
+                    </td>
+                    <td>
+                        @reservatie.Datum.ToString()
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Reservatie" asp-action="DetailReservation" asp-route-id="@reservatie.Id">Details</a>
+                        <form class="d-inline" asp-action="OverviewReservations" asp-controller="Reservatie" asp-route-id="@reservatie.Id">
+                            <input type="submit" value="Verwijderen" class="btn btn-danger" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
