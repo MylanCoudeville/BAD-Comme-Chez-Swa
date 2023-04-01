@@ -18,7 +18,7 @@ namespace CommeChezSwaMylanCoudeville.Controllers
                 };
                 return View(menuTypeViewModel);
             }
-            return View(new MenuTypeViewModel() { Menus = _menuRepository.GetAll()});
+            return View(new MenuTypeViewModel() { GeselecteerdMenu = _menuRepository.GetByType("LUNCH"), Menus = _menuRepository.GetAll()});
         }
     }
 }

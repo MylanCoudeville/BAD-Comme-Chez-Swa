@@ -20,14 +20,16 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//routing menu
+app.MapControllerRoute(
+    name: "menu",
+    pattern: "Menu/ShowMenu/{type?}",
+    defaults: new { controller = "Menu", action = "ShowMenu" }
+    );
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-//routing menu
-app.MapControllerRoute(
-    name: "menu",
-    pattern: "{controller=Menu}/{action=ShowMenu}/{type=LUNCH}"
-    );
 
 app.Run();
