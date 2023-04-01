@@ -1,7 +1,10 @@
 ﻿@model MenuTypeViewModel
+@{
+    ViewData["Title"] = "Menu pagina";
+}
 <div class="row justify-content-between">
     <div class="col">
-        <h1>@Model.GeselecteerdMenu.Naam</h1>
+        <h4>@Model.GeselecteerdMenu.Naam</h4>
         <ul>
         @foreach (var gerecht in Model.GeselecteerdMenu.Gerechten)
             {
@@ -18,7 +21,7 @@
     </div>
 
     <div class="col-md align-items-center">
-        <h1>Onze Menu's</h1>
+        <h4>Onze Menu's</h4>
         <ul>
             @foreach (var menu in Model.Menus)
             {

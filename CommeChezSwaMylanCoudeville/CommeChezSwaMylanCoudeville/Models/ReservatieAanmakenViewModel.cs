@@ -3,10 +3,8 @@ using System.Xml.Linq;
 
 namespace CommeChezSwaMylanCoudeville.Models
 {
-    public class Reservatie
+    public class ReservatieAanmakenViewModel
     {
-        public int Id { get; set; }
-
         [MaxLength(100)]
         [Required(ErrorMessage = "Uw voornaam moet ingevuld zijn.")]
         public string Voornaam { get; set; }
@@ -18,6 +16,11 @@ namespace CommeChezSwaMylanCoudeville.Models
         [EmailAddress(ErrorMessage = "Dit is geen geldig email-adres!")]
         [Required(ErrorMessage = "Uw email moet ingevuld zijn.")]
         public string Email { get; set; }
+
+        [Display(Name = "Bevesting email")]
+        [Compare("Email")]
+        [Required(ErrorMessage = "Uw bevestigings email moet ingevuld zijn.")]
+        public string BevestigEmail { get; set; }
 
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Uw datum moet ingevuld zijn.")]
@@ -34,5 +37,4 @@ namespace CommeChezSwaMylanCoudeville.Models
         [ExpectedValue(true, ErrorMessage = "U kunt geen reservatie aanmaken als u niet akkoord met de algemene voorwaarden.")]
         public bool Akkoord { get; set; }
     }
-    public enum Tijdstip { Ochtend, Middag, Avond }
 }

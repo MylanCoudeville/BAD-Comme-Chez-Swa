@@ -1,13 +1,14 @@
-﻿@model Reservatie
+﻿@model ReservatieAanmakenViewModel
 @{
     ViewBag.Titel = "Reservatie";
     ViewBag.Ondertitel = "Maak een nieuwe reservatie";
+    ViewData["Title"] = "Reservatie Aanmaken";
 }
 
 <h1>@ViewBag.Titel</h1>
-<h2>@ViewBag.Ondertitel</h2>
+<h4>@ViewBag.Ondertitel</h4>
 
-<div asp-validation-summary="All" class="text-danger"></div>
+<div asp-validation-summary="All" class="text-danger"></div> @*niet meer van toepassing door _ValidationScriptsPartial*@
 
 
 <form asp-controller="Reservatie" asp-action="CreateReservation">
