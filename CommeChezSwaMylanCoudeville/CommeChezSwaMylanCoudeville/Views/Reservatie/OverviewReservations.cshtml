@@ -33,7 +33,7 @@
                         @reservatie.Achternaam
                     </td>
                     <td>
-                        @reservatie.Datum.ToString()
+                        @reservatie.Datum.Value.ToShortDateString()
                     </td>
                     <td>
                         <a class="btn btn-primary" asp-controller="Reservatie" asp-action="DetailReservation" asp-route-id="@reservatie.Id">Details</a>
